@@ -14,7 +14,7 @@ Rencontres aléatoires gens/groupes gens (bandits, chasseurs/cueilleurs etc etc,
 	   trucs peuvent ou non être visibles sur la carte
 
 Style de jeu axé sur la survie
-Mutations des gens (ZOMBIIIES)
+Mutations des gens -> yeux, membres supplémentaires, rage + beserkeries, dents, branchies, ailes, force ++, etc
 
 // Monde généré aléatoirement : patterns + modèles de zones
 // Diagramme de Voronoï pour génération map (création de zones) / Triangulation de Delaunay
@@ -66,3 +66,4 @@ Dextérité ->
 Force -> 
 Chance ->
 etc etc etc
+
