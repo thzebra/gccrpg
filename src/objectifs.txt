@@ -1,0 +1,5 @@
+Premier jet : 
+- bonhomme qui se déplace sur une carte
+- un seul biome
+- pnj minimaux
+- rencontres ???

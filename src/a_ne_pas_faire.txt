@@ -1,0 +1,11 @@
+- doublages pourris (doublages tout court)
+
+- quêtes à la con
+
+- combats paf paf paf
+
+- diminuer les FPS en conséquence d'une surcharge
+
+- portée des armes nulle (type fourchette, mais avec le sprite d'une épée)
+
+- des bruitages faits avec la bouche
