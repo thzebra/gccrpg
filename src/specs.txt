@@ -53,3 +53,16 @@ Gestion du vieillissement
 	pour le lol, un jour peut-être
 
 Affichage de messages/dialogues
+
+Inventaire -> poids des objets ? surcharge ?
+
+=== Caractéristiques du perso ===
+
+Développement des caractéristiques en fonction des talents utilisés 
+
+Intelligence -> débloque des options de dialogue
+Charisme -> modifie les réactions des PNJ
+Dextérité ->
+Force -> 
+Chance ->
+etc etc etc
