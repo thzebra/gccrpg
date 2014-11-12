@@ -1,0 +1,55 @@
+~*~*~ UN JEU DE PESTIFÉRÉS ~*~*~
+
+Univers médiéval, hiver perpétuel ?? très stéréotypé médiéval, seigneurs/pauvres
+Maladie majjyk -> vivre en ville = extrêmement dangereux
+	Gens : voyageurs solitaires, groupes itinérants, villes saines fortifiées
+
+Personnage : voyageur, rejeté par tout le monde à cause méfiance ambiante :( etc
+	   début du jeu en solo mais rassemblement équipe possible (max 4 6 8 ?)
+	   s'y connaît un peu en butage de trucs	   
+
+Rencontres aléatoires gens/groupes gens (bandits, chasseurs/cueilleurs etc etc, petites filles avec nounours assorti :'(, loups, ours, bête du Gévaudan)
+	   actions : les buter, discuter (rumeurs etc etc) ça va être la mayrde
+	   dans un premier temps : un seul type implémenté
+	   trucs peuvent ou non être visibles sur la carte
+
+Style de jeu axé sur la survie
+Mutations des gens (ZOMBIIIES)
+
+// Monde généré aléatoirement : patterns + modèles de zones
+// Diagramme de Voronoï pour génération map (création de zones) / Triangulation de Delaunay
+// Villes au centre de la zone
+// Biomes
+
+Map en scrolling + icônes lieu ; collision avec icône -> changement de map
+Taille max map ?
+
+Gestion des niveaux : niveaux de compétences
+
+=== FONCTIONS !! ===
+
+Gestion des collisions
+	Mauvaises rencontres
+	Changement de lieu
+		   Charger les lieux à partir d'un fichier
+		   Enregistrement dans un fichier
+	Murs, arbres, obstacles divers
+
+Gestion des combats
+	Plus tard !
+
+Récupérer type de terrain + récupérer vitesse selon type 
+
+Sauvegarde
+
+Système de scores ? (temps de jeu, points...)
+
+Gestion du temps (en fonction du temps)
+
+Objets
+	tous les objets. tous.
+
+Gestion du vieillissement
+	pour le lol, un jour peut-être
+
+Affichage de messages/dialogues
