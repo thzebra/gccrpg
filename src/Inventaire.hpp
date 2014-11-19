@@ -2,7 +2,10 @@
 #define __INVENTAIRE_HPP__
 
 class Inventaire {
-  // une liste chaînée d'objets
+
+protected :
+
+  std::list _inventaire ;
 
 public :
   Inventaire() ;
@@ -11,4 +14,5 @@ public :
   void retirer(Objet) ;
   void ajouter(Objet) ;
   ~Inventaire() ;
+
 }

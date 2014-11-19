@@ -5,13 +5,15 @@
 
 class Creature {
 
+protected :
+  int _nom ;
+
 public :
   Creature(int) ;
   bool estVivant() const ;
-  ~Creature() ;
-
-private :
-  int _vie ;
+  ~Creature() ;private :
+  int _nom ;
+  
 }
 
 #endif

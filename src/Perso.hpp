@@ -1,7 +1,9 @@
 #ifndef __PERSO_HPP__
 #define __PERSO_HPP__
 
-class Perso : Humain {
+class Perso : public Humain {
+
+protected :
 
   int _force ;
   int _charisme ;

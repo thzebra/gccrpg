@@ -5,12 +5,12 @@ classes utilisées
 Objet : tous les objets qui apparaissent dans le jeu (armes, murs, arbres, potions...) 
       Ramassable : poids, quantité, valeur
       		 Utilisable : compétences minimales requises (méthodes de tests), emplacement (tête/pieds/.../une seule utilisation), effet
-		 	    Arme : dégâts, méthodes d'attaque
+		 	    Arme : dégâts, méthodes d'attaque, une main/deux mains
 			    Armure : bonus défense
 			    Parchemin : effet
       Fixe :
 	   MauvaiseRencontre : type de la rencontre
-	   Obstacle : détruisable, brûlable, déplaçable...
+	   Obstacle : destructible, brûlable, déplaçable...
 
 
 Créature : PV
@@ -25,6 +25,12 @@ Créature : PV
 
 
 Inventaire : liste d'objets, méthodes ajout/retrait/test contenance/poids total
+
+Effet : déclencher(), durée (en secondes ? différence effets uniques à durée infinie et effets tant que l'objet est porté)
+      BonusAttribut : méthode void effet(int)
+      EffetFonction : méthode void effet()
+      bleh bleh bleh
+      
 
 =======
 
