@@ -1,0 +1,29 @@
+=== GAMEPLAY ===
+
+classes utilisées 
+
+Objet : tous les objets qui apparaissent dans le jeu (armes, murs, arbres, potions...) 
+      Ramassable : poids, quantité, valeur
+      		 Utilisable : compétences minimales requises (méthodes de tests), emplacement (tête/pieds/.../une seule utilisation), effet
+		 	    Arme : dégâts, méthodes d'attaque
+			    Armure : bonus défense
+			    Parchemin : effet
+      Fixe :
+	   MauvaiseRencontre : type de la rencontre
+	   Obstacle : détruisable, brûlable, déplaçable...
+
+
+Créature : PV
+	 Humain : Nom
+	 	Perso : caractéristiques, inventaire, compétences (???)
+		PNJ : ami/ennemi
+		    Villageois : ville
+		    	       Garde, Marchand, Quête Guy...
+		    Nomade : trajectoire (???)
+		    	   Bandit, Voleur, Gamine...
+		    Coéquipier : salaire, loyauté (lulz)
+	 Streum : dégâts naturels
+
+
+Inventaire : liste d'objets, méthodes ajout/retrait/test contenance/poids total
+
