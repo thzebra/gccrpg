@@ -17,13 +17,19 @@ Créature : PV
 	 Humain : Nom
 	 	Perso : caractéristiques, inventaire, compétences (???)
 		PNJ : ami/ennemi
-		    Villageois : ville
-		    	       Garde, Marchand, Quête Guy...
+		    Garde, Marchand, Quête Guy...
 		    Nomade : trajectoire (???)
 		    	   Bandit, Voleur, Gamine...
 		    Coéquipier : salaire, loyauté (lulz)
-	 Streum : dégâts naturels
+	 Monstre : dégâts naturels
 
 
 Inventaire : liste d'objets, méthodes ajout/retrait/test contenance/poids total
 
+=======
+
+bon c'est assez dégueulasse pour l'instant, j'ai pas mis tous les attributs/méthodes ni rien, les .hpp sont pas super complets non plus mais c'est un début
+
+pour l'inventaire je sais pas trop quoi prendre comme structure mais en gros il faut un truc extensible si on gère par le poids (le perso doit pouvoir prendre 3000 petits cailloux d'un gramme) ; il faudrait pouvoir ajouter/retirer des objets à son gré et vérifier la présence d'un truc sans trop de temps de calcul
+
+séparation humains/streums vraiment nécessaire ? certaines classes probz inutiles/mal foutues bah ha ha ha

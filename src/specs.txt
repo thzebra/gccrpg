@@ -42,12 +42,12 @@ Récupérer type de terrain + récupérer vitesse selon type
 
 Sauvegarde
 
-Système de scores ? (temps de jeu, points...)
+Système de scores ? (temps de jeu, points...) whatever
 
 Gestion du temps (en fonction du temps)
 
 Objets
-	tous les objets. tous.
+	tous les objets. tous. non
 
 Gestion du vieillissement
 	pour le lol, un jour peut-être

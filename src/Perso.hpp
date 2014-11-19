@@ -18,6 +18,7 @@ public :
   int getChance() const ;
   int getDexterite() const ;
   int getPoidsMax() const ;
+  ~Perso() ;
 
 }
 

@@ -8,6 +8,7 @@ class Creature {
 public :
   Creature(int) ;
   bool estVivant() const ;
+  ~Creature() ;
 
 private :
   int _vie ;

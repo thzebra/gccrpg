@@ -7,8 +7,11 @@ public :
   Humain(int, char *) ;
   char * getNom() ;
   void setNom(char *) ;
+  ~Humain() ;
 
 private :
   int _nom ;
 
 }
+
+#endif
