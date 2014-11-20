@@ -7,7 +7,7 @@ Objet : tous les objets qui apparaissent dans le jeu (armes, murs, arbres, potio
       		 Utilisable : compétences minimales requises (méthodes de tests), emplacement (tête/pieds/.../une seule utilisation), effet
 		 	    Arme : dégâts, méthodes d'attaque, une main/deux mains
 			    Armure : bonus défense
-			    Parchemin : effet
+			    UsageUnique : effet
       Fixe :
 	   MauvaiseRencontre : type de la rencontre
 	   Obstacle : destructible, brûlable, déplaçable...
@@ -26,9 +26,7 @@ Créature : PV
 
 Inventaire : liste d'objets, méthodes ajout/retrait/test contenance/poids total
 
-Effet : déclencher(), durée (en secondes ? différence effets uniques à durée infinie et effets tant que l'objet est porté)
-      BonusAttribut : méthode void effet(int)
-      EffetFonction : méthode void effet()
+Effet : déclencher(), durée (en secondes, <0 pour un effet infini par exemple)
       bleh bleh bleh
       
 

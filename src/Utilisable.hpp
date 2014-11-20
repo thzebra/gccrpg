@@ -5,11 +5,11 @@ class Utilisable : public Ramassable {
 
 protected :
   int _emplacement ;
-  Effet _effet ;
 
 public :
   Utilisable() ;
   bool aCompetencesRequises(Perso) ;
+  void utiliser() ;
   ~Utilisable() ;
 }
 

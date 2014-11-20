@@ -4,8 +4,8 @@
 class Arme : public Utilisable {
 protected :
   
-  Effet effet ;
   bool _estAUneMain ;
+  int degats ;
 
 public :
   Arme() ;
