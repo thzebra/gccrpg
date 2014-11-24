@@ -13,7 +13,8 @@ protected :
   Inventaire _stuff ;
 
 public :
-
+  
+  Perso(char *, int, int, int, int, int, Inventaire) ;
   int getForce() const ;
   int getCharisme() const ;
   int getIntelligence() const ;
