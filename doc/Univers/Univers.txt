@@ -1,0 +1,35 @@
+World
+  |
+  v
+Region
+  |
+  v
+Tile
+  |
+  v
+Terrain
+
+
+
+Personnage
+	Abscisse
+	Ordonnée (structure Coordinates ?)
+
+	getCoordinates
+
+	getRegion
+
+	getTerrain
+	
+	
+	move(direction) (une seule coordonnée à la fois)
+		if !isObstacle (getCoordinates + direction)
+		   go
+
+	
+
+Tile
+	isEmpty
+
+	isObstacle
+
