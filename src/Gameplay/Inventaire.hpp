@@ -1,11 +1,13 @@
 #ifndef __INVENTAIRE_HPP__
 #define __INVENTAIRE_HPP__
 
+#include "Objet.hpp"
+
 class Inventaire {
 
 protected :
 
-  std::list _inventaire ;
+  std::list _stuff ;
 
 public :
   Inventaire() ;
@@ -16,3 +18,5 @@ public :
   ~Inventaire() ;
 
 }
+
+#endif

@@ -12,8 +12,9 @@ public :
   Ramassable(int, int, int) ;
   int getPoids() ;
   int getQuantite() ;
-  int getValeur() ;
-  ~Ramassable() ;
+  int valeurVente() ;
+  int valeurAchat() ;
+  virtual ~Ramassable() ;
 }
 
 #endif

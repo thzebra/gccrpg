@@ -1,18 +1,32 @@
 #ifndef __CREATURE_HPP__
 #define __CREATURE_HPP__
 
-#include <cstdio>
+#define MAX_NOM 50
 
 class Creature {
 
 protected :
-  int _nom ;
+  char _nom[MAX_NOM] ;
+  int _vie ;
+  int _vieMax ;
+  int _attaqueBase ;
+  int _defenseBase ;
+  int _force ;
+  int _dexterite ;
+  int _chance ;
+  int _vitesse ;
+  Coordonnees _coordonnees ;
 
 public :
-  Creature(int) ;
+  Creature(char) ;
+  virtual void attaquer(Creature) ;
   bool estVivant() const ;
-  ~Creature() ;private :
-  int _nom ;
+  Coordonnees getCoordonnees() const ;
+  int getForce() const ;
+  int getDexterite() const ;
+  int getChance() const ;
+  virtual utiliserObjet(Objet) ;
+  virtual ~Creature() ;
   
 }
 

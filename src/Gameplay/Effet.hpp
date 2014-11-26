@@ -11,7 +11,7 @@ public :
   void declencher() ;
   int getDuree() ;
   bool dureeEstInfinie() ;
-  ~Effet() ;
+  virtual ~Effet() ;
 }
 
 #endif

@@ -10,7 +10,7 @@ public :
   Utilisable() ;
   bool aCompetencesRequises(Perso) ;
   void utiliser() ;
-  ~Utilisable() ;
+  virtual ~Utilisable() ;
 }
 
 #endif

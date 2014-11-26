@@ -9,7 +9,7 @@ protected :
 public :
   Armure() ;
   int getDefense() ;
-  ~Armure() ;
+  virtual ~Armure() ;
 
 }
 
