@@ -2,7 +2,6 @@
 #define __HUMAIN_HPP__
 
 #include "Creature.hpp"
-#include "Arme.hpp"
 
 class Humain : public Humanoide {
 

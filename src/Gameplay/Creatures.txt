@@ -1,0 +1,31 @@
+=== DIAGRAMME DE CLASSES vite fait === 
+
+Classe de base : Créature
+2 classes filles : Monstre (tous les streums) et Humanoide (tous les PNJ et les PJ)
+PNJ contient un attribut Humanoide
+PJ implémente PNJ
+
+Les classes de race (Elfe, Nain, Troll, etc etc etc) implémentent Humanoide
+
+=== RACES IMPLÉMENTÉES DANS UN PREMIER TEMPS ===
+
+Humain : stats moyennes
+Orc : malus charisme, bonus force, magie shamanique ??
+Elfe : bonus charisme + dex, malus constitution faut pas déconner
+
+=== STREUMS DE BASE ===
+
+bon on n'en a pas parlé, il faudrait voir ce qu'on fait comme sous-classes etc
+
+=== IDÉES SUBSIDIAIRES POUR LA DÉCONNE ===
+
+Khajit : bonus charisme + dex, attaque griffes, malus intelligence
+Gobelin : malus char force const int, bonus chance +++, vitesse, gain d'exp
+Demi-géant : bonus force const vie, malus dex vitesse charisme
+Troll : bonus force const vie, REGEXP, résistance poison et gueule de bois, malus dex vitesse charisme
+Nain : malus charisme, bonus défense
+Hobbit : stats à la con ("complètement pétées" dixit antoine qui l'était lui aussi), doivent manger 5 fois/jour, résistance poison, bonus vitesse chance dex
+
+Proposition de PNJ de race Ange qui fout la merde en essayant de t'aider, se casse et te laisse ramasser les morceaux (aka tu t'en prends plein la yeule) c'est un bon scénar imho
+
+
