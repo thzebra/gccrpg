@@ -1,6 +1,8 @@
 #ifndef __RAMASSABLE_HPP__
 #define __RAMASSABLE_HPP__
 
+#include "Objet.hpp"
+
 class Ramassable : public Objet {
   
 protected :

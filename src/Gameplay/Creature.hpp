@@ -3,6 +3,8 @@
 
 #define MAX_NOM 50
 
+#include "Coordonnees.hpp"
+
 class Creature {
 
 protected :

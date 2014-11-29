@@ -1,15 +1,15 @@
 #ifndef __PERSO_HPP__
 #define __PERSO_HPP__
 
-#include "Inventaire.hpp"
-#include "Coordonnees.hpp"
+#include "PNJ.hpp"
+#include "Talent.hpp"
 
 class Perso : public PNJ {
 
 protected :
   std::list<Talent, int> _talents ;
   Humanoide _race ;
-
+  
 public :
   Perso(char *, int, int, int, int, int, Inventaire) ;
   int getPoidsMax() const ;

@@ -1,7 +1,7 @@
 #ifndef __ORC_HPP__
 #define __ORC_HPP__
 
-#include "Creature.hpp"
+#include "Humanoide.hpp"
 
 class Orc : public Humanoide {
 

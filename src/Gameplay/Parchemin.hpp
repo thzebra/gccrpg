@@ -1,6 +1,8 @@
 #ifndef __PARCHEMIN_HPP__
 #define __PARCHEMIN_HPP__
 
+#include "Utilisable.hpp"
+
 class Parchemin : public Utilisable {
 
 protected :

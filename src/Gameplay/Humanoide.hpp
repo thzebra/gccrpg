@@ -3,6 +3,7 @@
 
 #include "Creature.hpp"
 #include "Arme.hpp"
+#include "Armure.hpp"
 
 class Humanoide : public Creature {
 

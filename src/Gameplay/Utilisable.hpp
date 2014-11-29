@@ -1,6 +1,8 @@
 #ifndef __UTILISABLE_HPP__
 #define __UTILISABLE_HPP__
 
+#include "Ramassable.hpp"
+
 class Utilisable : public Ramassable {
 
 protected :
