@@ -1,7 +1,7 @@
-World
+World ---------> sauvegarde type XML
   |
   v
-Region
+Region --------> Objects (obstacles)
   |
   v
 Tile
@@ -12,10 +12,7 @@ Terrain
 
 
 Personnage
-	Abscisse
-	Ordonnée (structure Coordinates ?)
-
-	getCoordinates
+	Coordinates
 
 	getRegion
 
