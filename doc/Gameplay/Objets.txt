@@ -1,0 +1,37 @@
+=== DIAGRAMME DE CLASSES === 
+
+Classe mère : Objet
+4 classes filles : Portable (Arme, Armure...), Munition (Flèche, Carreau...), Utilisable (Parchemin, Potion), Sous.
+
+- Sous-classes de Portable
+
+Armure : Casque, Chaussures, Bouclier, ArmureCorps
+
+Arme : Distance, UneMain, DeuxMains
+
+Les classes filles des classes d'armes implémentent une classe de dégâts.
+
+- Classes de dégâts
+
+Classes Perforant, Contondant, Tranchant
+
+
+=== ARMES DE BASE ===
+
+Épée (UneMain + Tranchant)
+Épée à deux mains (DeuxMains + Tranchant)
+Massue (UneMain + Contondant)
+Dague (UneMain + Perforant)
+Lance (DeuxMains + Perforant)
+
+=== ARMURE DE BASE === 
+
+Deux de chaque : un en cuir (plus léger mais moins de défense), un en bon gros métal (plus lourd, plus de défense)
+
+=== POTIONS DE BASE ===
+
+Soins : petite, moyenne, grande
+
+=== PARCHEMINS DE BASE ===
+
+non

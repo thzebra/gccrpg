@@ -1,23 +1,20 @@
 #ifndef __PERSO_HPP__
 #define __PERSO_HPP__
 
-class Perso : Humain {
+#include "PNJ.hpp"
+#include "Talent.hpp"
 
-  int _force ;
-  int _charisme ;
-  int _intelligence ;
-  int _chance ;
-  int _dexterite ;
-  Inventaire _stuff ;
+class Perso : public PNJ {
 
+protected :
+  std::list<Talent, int> _talents ;
+  Humanoide _race ;
+  
 public :
-
-  int getForce() const ;
-  int getCharisme() const ;
-  int getIntelligence() const ;
-  int getChance() const ;
-  int getDexterite() const ;
+  Perso(char *, int, int, int, int, int, Inventaire) ;
   int getPoidsMax() const ;
+  void incrementerTalent(Talent, int) ;
+  int getNiveau(Talent) ;
   ~Perso() ;
 
 }

@@ -1,16 +1,15 @@
 #ifndef __HUMAIN_HPP__
 #define __HUMAIN_HPP__
 
-class Humain : Creature {
+#include "Creature.hpp"
+
+class Humain : public Humanoide {
 
 public :
-  Humain(int, char *) ;
+  Humain(int, int, char *) ;
   char * getNom() ;
   void setNom(char *) ;
-  ~Humain() ;
-
-private :
-  int _nom ;
+  virtual ~Humain() ;
 
 }
 

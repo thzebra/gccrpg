@@ -1,8 +1,13 @@
 #ifndef __INVENTAIRE_HPP__
 #define __INVENTAIRE_HPP__
 
+#include "Objet.hpp"
+
 class Inventaire {
-  // une liste chaînée d'objets
+
+protected :
+
+  std::list _stuff ;
 
 public :
   Inventaire() ;
@@ -11,4 +16,7 @@ public :
   void retirer(Objet) ;
   void ajouter(Objet) ;
   ~Inventaire() ;
+
 }
+
+#endif
