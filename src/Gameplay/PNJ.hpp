@@ -11,6 +11,7 @@ private :
   
 public :
   PNJ(char, Inventaire) ;
+  virtual void utiliserObjet(Objet) ;
   virtual ~PNJ() ;
   
 }

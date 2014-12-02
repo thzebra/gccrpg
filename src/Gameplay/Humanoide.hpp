@@ -2,8 +2,7 @@
 #define __HUMANOIDE_HPP__
 
 #include "Creature.hpp"
-#include "Arme.hpp"
-#include "Armure.hpp"
+#include "Inventaire.hpp"
 
 class Humanoide : public Creature {
 
@@ -11,13 +10,11 @@ protected :
   Inventaire _stuff ;
   int _charisme ;
   int _intelligence ;
-  virtual int getCharisme() const ;
-  virtual int getIntelligence() const ;
 
 public :
-  Humanoide(int, int, char *) ;
-  char * getNom() ;
-  void setNom(char *) ;
+  Humanoide(char *, int, int, int, int, int, int, int, int, int, Coordonnees) ;
+  virtual int getCharisme() const ;
+  virtual int getIntelligence() const ;
   virtual ~Humanoide() ;
 
 }

@@ -9,25 +9,21 @@ class Creature {
 
 protected :
   char _nom[MAX_NOM] ;
-  int _vie ;
-  int _vieMax ;
+  Jauge _vie ;
   int _attaqueBase ;
   int _defenseBase ;
-  int _force ;
-  int _dexterite ;
-  int _chance ;
-  int _vitesse ;
+  Caracteristiques _carac ;
   Coordonnees _coordonnees ;
 
 public :
-  Creature(char) ;
+  Creature(char *, int, int, int, int, int, int, int, Coordonnees) ;
   virtual void attaquer(Creature) ;
   bool estVivant() const ;
   Coordonnees getCoordonnees() const ;
   int getForce() const ;
   int getDexterite() const ;
   int getChance() const ;
-  virtual utiliserObjet(Objet) ;
+  int getVitesse() const ;
   virtual ~Creature() ;
   
 }

@@ -9,8 +9,9 @@ protected :
   char _nom[MAX_NOM] ;
 
 public :
+  Talent (char *) ;
   char * getNom() ;
-
+  ~Talent() ;
 }
 
 #endif
