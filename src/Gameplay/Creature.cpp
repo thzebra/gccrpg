@@ -6,7 +6,12 @@ Creature::Creature(char * nom, int vieMax, int attBase, int defBase, int str, in
   _vie = Jauge(vieMax) ;
   _attaqueBase = attBase ;
   _defenseBase = defBase ;
-  _carac = Caracteristiques(str, dex, lck, vitesse) ;
+  _carac = new std::map<Caracteristique, int> {
+    {(Caracteristique::FORCE, str)}, 
+    {(Caracteristique::DEXTERITE, dex)},
+    {(Caracteristique::CHANCE, lck)},
+    {(Caracteristique::VITESSE, vitesse)}
+  };
   _coordonnees = c ;
 }
 
@@ -38,7 +43,7 @@ int Creature::getVitesse() {
   return _carac.getVitesse() ;
 }
 
-virtual ~Creature() {
+virtual Creature::~Creature() {
   _vie.~Jauge() ;
   _coordonnees.~Coordonnees() ;
 }
