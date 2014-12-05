@@ -12,7 +12,7 @@ protected :
   int _intelligence ;
 
 public :
-  Humanoide(char *, int, int, int, int, int, int, int, int, int, Coordonnees) ;
+  Humanoide(char * nom, int vieMax, int attBase, int defBase, int str, int dex, int lck, int vitesse, int charisme, int intelligence, Coordonnees c) ;
   virtual int getCharisme() const ;
   virtual int getIntelligence() const ;
   virtual ~Humanoide() ;

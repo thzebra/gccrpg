@@ -12,7 +12,7 @@ protected :
   Jauge _vie ;
   int _attaqueBase ;
   int _defenseBase ;
-  Caracteristiques _carac ;
+  std::map<Caracteristique, int> _carac ;
   Coordonnees _coordonnees ;
 
 public :
@@ -20,10 +20,10 @@ public :
   virtual void attaquer(Creature) ;
   bool estVivant() const ;
   Coordonnees getCoordonnees() const ;
-  int getForce() const ;
-  int getDexterite() const ;
-  int getChance() const ;
-  int getVitesse() const ;
+  virtual int getForce() const ;
+  virtual int getDexterite() const ;
+  virtual int getChance() const ;
+  virtual int getVitesse() const ;
   virtual ~Creature() ;
   
 }

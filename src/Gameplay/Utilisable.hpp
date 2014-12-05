@@ -6,11 +6,10 @@
 class Utilisable : public Ramassable {
 
 protected :
-  int _emplacement ;
-
+  Emplacement _emplacement ;
+  
 public :
-  Utilisable() ;
-  bool aCompetencesRequises(Perso) ;
+  Utilisable(char * nom, Talent t, int modif, int poids, int qte, int valeur, Emplacement e) ;
   void utiliser() ;
   virtual ~Utilisable() ;
 }

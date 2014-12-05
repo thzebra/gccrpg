@@ -3,15 +3,18 @@
 
 #include "Talent.hpp"
 
+#define MAX_NOM 50 ;
+
 class Objet {
 protected :
-  char * _nom ;
+  char _nom[MAX_NOM] ;
   Talent _talentAssocie ;
-
+  int _modificateur ;
+  
 public :
-  Objet(char *) ;
-  char * getNom() ;
-  Talent getTalent() ;
+  Objet(char * nom, Talent t, int modif = 0) ;
+  virtual char * getNom() const ;
+  virtual Talent getTalent() const ;
   virtual ~Objet() ;
 }
 

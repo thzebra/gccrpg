@@ -8,13 +8,13 @@ class Perso : public PNJ {
 
 protected :
   std::list<Talent, int> _talents ;
-  Humanoide _race ;
   
 public :
   Perso(char *, int, int, int, int, int, Inventaire) ;
   int getPoidsMax() const ;
-  void incrementerTalent(Talent, int) ;
-  int getNiveau(Talent) ;
+  void incrementerTalent(Talent t, int exp) ;
+  int getNiveau(Talent t) ;
+  bool aCompetencesRequises(Objet o) const ;
   ~Perso() ;
 
 }

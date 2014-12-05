@@ -8,10 +8,11 @@ class PNJ : public Humanoide {
   
 private : 
   Inventaire _stuff ;
+  Humanoide _race ;
   
 public :
-  PNJ(char, Inventaire) ;
-  virtual void utiliserObjet(Objet) ;
+  PNJ(char * nom, Inventaire stuff, Humanoide race) ;
+  virtual void utiliserObjet(Objet, Creature) ;
   virtual ~PNJ() ;
   
 }
