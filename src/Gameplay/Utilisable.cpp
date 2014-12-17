@@ -1,7 +1,7 @@
 #include "Utilisable.hpp"
 #include <cstring>
 
-Ramassable::Ramassable(
+zRamassable::Ramassable(
 
 
 

@@ -4,13 +4,11 @@
 class Effet {
 
 protected :
-  int _duree ;
+  int _timer ;
   
 public :
-  Effet() ;
-  void declencher() ;
-  int getDuree() ;
-  bool dureeEstInfinie() ;
+  Effet(int t) ;
+  virtual bool isFini() const ;
   virtual ~Effet() ;
 }
 

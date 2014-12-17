@@ -12,7 +12,7 @@ Creature::Creature(char * nom, int vieMax, int attBase, int defBase, int str, in
     {(Caracteristique::CHANCE, lck)},
     {(Caracteristique::VITESSE, vitesse)}
   };
-  _coordonnees = c ;
+  _coordonnees = Coordonnees(&c) ;
 }
 
 void Creature::attaquer(Creature) {
@@ -25,6 +25,14 @@ bool Creature::estVivant() {
 
 Coordonnees Creature::getCoordonnees() {
   return _coordonnees ;
+}
+
+std::list<Alteration> Creature::getEtat() {
+  // TODO
+}
+
+std::list<Buff> Creature::getBuffs() {
+  // TODO
 }
 
 int Creature::getForce() {

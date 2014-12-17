@@ -6,11 +6,12 @@
 class Utilisable : public Ramassable {
 
 protected :
-  Emplacement _emplacement ;
+  std::list<Effet> _effets ;
   
 public :
-  Utilisable(char * nom, Talent t, int modif, int poids, int qte, int valeur, Emplacement e) ;
-  void utiliser() ;
+  Utilisable(char * nom, int poids, int valeur) ;
+  virtual void useObjet(Creature cible) ;
+  virtual std::list<Effet> getEffets() ;
   virtual ~Utilisable() ;
 }
 

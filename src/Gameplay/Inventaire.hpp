@@ -12,9 +12,9 @@ protected :
 public :
   Inventaire() ;
   virtual int getPoidsTotal() const;
-  virtual bool contient(Objet* obj) const;
-  virtual void retirer(Objet* obj) ;
-  virtual void ajouter(Objet*obj) ;
+  virtual bool contient(Objet& obj) const;
+  virtual void retirer(Objet& obj) ;
+  virtual void ajouter(Objet&obj) ;
   virtual ~Inventaire() ;
 }
 

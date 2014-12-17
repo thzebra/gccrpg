@@ -7,16 +7,14 @@
 class Perso : public PNJ {
 
 protected :
-  std::list<Talent, int> _talents ;
+  std::map<Talent, int> _talents ;
   
 public :
-  Perso(char *, int, int, int, int, int, Inventaire) ;
-  int getPoidsMax() const ;
-  void incrementerTalent(Talent t, int exp) ;
-  int getNiveau(Talent t) ;
-  bool aCompetencesRequises(Objet o) const ;
+  Perso(char * nom, int vie, int mana, int attaqueBase, int defenseBase, int force, int dexterite, int chance, int vitesse, Inventaire stuff, Humanoide race, Coordonnees c = Coordonnees(0, 0)) ;
+  void upgradeTalent(Talent t) ;
+  void oublierTalent(Talent t) ;
+  int getTalentLevel(Talent t) ;
   ~Perso() ;
-
 }
 
 #endif

@@ -8,13 +8,14 @@
 class Objet {
 protected :
   char _nom[MAX_NOM] ;
-  Talent _talentAssocie ;
-  int _modificateur ;
+  int _poids ;
+  int _valeur ;
   
 public :
-  Objet(char * nom, Talent t, int modif = 0) ;
+  Objet(char * nom, int poids, int valeur) ;
   virtual char * getNom() const ;
-  virtual Talent getTalent() const ;
+  virtual int getPoids() const ;
+  virtual int getValeur() const ;
   virtual ~Objet() ;
 }
 
