@@ -34,7 +34,7 @@ int PNJ::getPrix(Objet &o) {
 
 void PNJ::vendre(Objet &o) {
   _stuff.retirer(&o) ;
-  _stuff.setSous(o->getPrix() + _stuff.getSous()) ;
+  _stuff.pickSous(o->getPrix()) ;
 }
 
 void PNJ::getSous() {

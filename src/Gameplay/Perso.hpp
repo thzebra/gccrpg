@@ -12,7 +12,7 @@ protected :
 public :
   Perso(char * nom, int vie, int mana, int attaqueBase, int defenseBase, int force, int dexterite, int chance, int vitesse, Inventaire stuff, Humanoide race, Coordonnees c = Coordonnees(0, 0)) ;
   void upgradeTalent(Talent t) ;
-  void oublierTalent(Talent t) ;
+  void forgetTalent(Talent t) ;
   int getTalentLevel(Talent t) ;
   ~Perso() ;
 }

@@ -13,6 +13,7 @@ protected :
 public :
   Arme() ;
   bool estAUneMain() ;
+  int getAttaque() ;
   virtual ~Arme() ;
 }
 

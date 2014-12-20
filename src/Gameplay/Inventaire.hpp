@@ -7,15 +7,19 @@ class Inventaire {
 
 protected :
 
-  std::list<Objet*> _stuff ;
+  int _sous ;
+  std::list<Objet> _stuff ;
 
 public :
   Inventaire() ;
-  virtual int getPoidsTotal() const;
+  virtual int getPoids() const;
   virtual bool contient(Objet& obj) const;
   virtual void retirer(Objet& obj) ;
   virtual void ajouter(Objet&obj) ;
+  virtual void vendre(Objet &o) ;
+  virtual int getSous() ;
+  virtual void pickSous() ;
   virtual ~Inventaire() ;
-}
+} ;
 
 #endif

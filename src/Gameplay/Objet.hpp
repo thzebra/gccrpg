@@ -2,6 +2,8 @@
 #define __OBJET_HPP__
 
 #include "Talent.hpp"
+#include "Perso.hpp"
+#include "Element.hpp"
 
 #define MAX_NOM 50 ;
 
@@ -10,13 +12,23 @@ protected :
   char _nom[MAX_NOM] ;
   int _poids ;
   int _valeur ;
+  Element _elt ;
+  std::list<Enchantement> _enchantements ;
+  Element _elt ;
   
 public :
   Objet(char * nom, int poids, int valeur) ;
   virtual char * getNom() const ;
   virtual int getPoids() const ;
   virtual int getValeur() const ;
+  virtual int getModificateur(Talent t) = 0 ;
+  virtual int getModificateur(Caracteristique c) ;
+  virtual int getAttaque() = 0 ;
+  virtual int getDefense() = 0 ;
+  virtual void utiliser(Perso p) ;
+  virtual Talent getTalent() ;
+  virtual Element getElement() ;
   virtual ~Objet() ;
-}
+} ;
 
 #endif

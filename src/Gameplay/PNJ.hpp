@@ -16,12 +16,12 @@ public :
   virtual int getPoidsMax() const ;
   virtual void utiliserObjet(Objet o, Creature c) ;
   virtual void pickObjet(Objet o) ;
+  virtual void pickSous(int s) ;
   virtual void dumpObjet(Objet o) ;
   virtual int getPrix(Objet o) const ;
   virtual void vendre(Objet o) ;
   virtual int getSous() const ;
   virtual ~PNJ() ;
-  
 } ;
 
 #endif
