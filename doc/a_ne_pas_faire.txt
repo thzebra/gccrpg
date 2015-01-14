@@ -6,6 +6,6 @@
 
 - diminuer les FPS en conséquence d'une surcharge
 
-- portée des armes nulle (type fourchette, mais avec le sprite d'une épée)
+- portée des armes nulle (type fourchette, mais avec le sprite d'une épée) les fourchettes c'est bien, cf Kweena (FF9).
 
 - des bruitages faits avec la bouche
