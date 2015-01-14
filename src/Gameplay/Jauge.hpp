@@ -7,8 +7,8 @@ private :
   int _niveau ;
 
 public :
-  virtual Jauge(int max) ;
-  virtual Jauge(int max, int niveau) ;
+  Jauge(int max) ;
+  Jauge(int max, int niveau) ;
   virtual bool estBleue() ;
   virtual bool estRouge() ;
   virtual bool estVerte() ;

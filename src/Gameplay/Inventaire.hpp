@@ -1,6 +1,8 @@
 #ifndef __INVENTAIRE_HPP__
 #define __INVENTAIRE_HPP__
 
+#include <list>
+
 #include "Objet.hpp"
 
 class Inventaire {

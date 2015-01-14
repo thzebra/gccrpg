@@ -1,7 +1,13 @@
 #include "PNJ.hpp"
 
-PNJ::PNJ(char * nom, int vie, int mana, int attaqueBase, int defenseBase, int force, int dexterite, int chance, int vitesse, Inventaire stuff, Coordonnees c = Coordonnees(0, 0)) {
-  _corps = Humanoide(nom, vie, mana, attaqueBase, defenseBase, force, dexterite, chance, vitesse, stuff, c) ;
+PNJ::PNJ(char * nom, int vie, int mana,
+	 int attaqueBase, int defenseBase,
+	 int force, int dexterite, int chance,
+	 int vitesse, Inventaire stuff,
+	 Coordonnees c = Coordonnees(0, 0)) {
+  _corps = Humanoide(nom, vie, mana, attaqueBase,
+		     defenseBase, force, dexterite,
+		     chance, vitesse, stuff, c) ;
   _stuff = Inventaire(&stuff) ;
 }
 
@@ -39,6 +45,27 @@ void PNJ::vendre(Objet &o) {
 
 void PNJ::getSous() {
   return _stuff.getSous() ;
+}
+
+PNJ PNJ::createElfe(char * nom) {
+  PNJ newElfe = new PNJ(nom, 
+			20, 20, 4, 4, 3, 6, 5, 5, ELFE,
+			new Inventaire(), new Coordonnees(0, 0)) ;
+  return newElfe ;
+}
+
+PNJ PNJ::createOrc(char * nom) {
+  PNJ newOrc = new PNJ(nom,
+		       40, 14, 7, 6, 6, 2, 7, 3, ORC,
+		       new Inventaire(), new Coordonnees(0, 0)) ;
+  return newOrc ;
+}
+
+PNJ PNJ::createHumain(char * nom) {
+  PNJ newHumain = new PNJ(nom,
+			  30, 17, 5, 5, 4, 4, 6, 4, HUMAIN,
+			  new Inventaire(), new Coordonnees(0, 0)) ;
+  return newHumain ;
 }
 
 void PNJ::~PNJ() {
