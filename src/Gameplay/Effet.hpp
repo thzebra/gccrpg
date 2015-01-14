@@ -10,6 +10,6 @@ public :
   Effet(int t) ;
   virtual bool isFini() const ;
   virtual ~Effet() ;
-}
+} ;
 
 #endif

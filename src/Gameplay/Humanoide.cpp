@@ -1,7 +1,11 @@
 #include "Humanoide.hpp"
 #include <cstring>
 
-Humanoide::Humanoide(char * nom, int vie, int mana, int attaqueBase, int defenseBase, int force, int dexterite, int chance, int vitesse, int charisme, int intelligence, Coordonnees c = Coordonnees(0, 0)) {
+Humanoide::Humanoide(char * nom, int vie, int mana, int attaqueBase,
+		     int defenseBase, int force, int dexterite,
+		     int chance, int vitesse, int charisme,
+		     int intelligence, Race_Humanoide race,
+		     Coordonnees c = Coordonnees(0, 0)) {
   _nom = strcpy(_nom, nom) ;
   _vie = Jauge(vie) ;
   _mana = Jauge(mana) ;
@@ -15,6 +19,7 @@ Humanoide::Humanoide(char * nom, int vie, int mana, int attaqueBase, int defense
     {(Caracteristique::CHARISME, charisme)},
     {(Caracteristique::INTELLIGENCE, intelligence)}
   };
+  _race = race % 3 ;
   _coordonnees = Coordonnees(&c) ;
 }
 

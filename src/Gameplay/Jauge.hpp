@@ -7,11 +7,11 @@ private :
   int _niveau ;
 
 public :
-  virtual Jauge(int max) ;
-  virtual Jauge(int max, int niveau) ;
+  Jauge(int max) ;
+  Jauge(int max, int niveau) ;
   virtual bool isNul() ;
-  bool isCritique() ;
-  bool isLessThanMoitie() ;
+  virtual bool isCritique() ;
+  virtual bool isLessThanMoitie() ;
   virtual int getMax() ;
   virtual int getNiveau() ;
   void modifier(int ajout) ;

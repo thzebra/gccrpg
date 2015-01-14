@@ -1,15 +1,19 @@
 #ifndef __OBJET_HPP__
 #define __OBJET_HPP__
 
+#include <list>
+
 #include "Talent.hpp"
 #include "Perso.hpp"
 #include "Element.hpp"
+#include "Enchantement.hpp"
+#include "Caracteristique.hpp"
 
-#define MAX_NOM 50 ;
+#define MAX_NOM_OBJET 50
 
 class Objet {
 protected :
-  char _nom[MAX_NOM] ;
+  char _nom[MAX_NOM_OBJET] ;
   int _poids ;
   int _valeur ;
   Element _elt ;

@@ -1,14 +1,21 @@
 #ifndef __CREATURE_HPP__
 #define __CREATURE_HPP__
 
-#define MAX_NOM 50
+#define MAX_NOM_CREATURE 50
 
+#include <map>
+#include <list>
+
+#include "Alteration.hpp"
+#include "Buff.hpp"
 #include "Coordonnees.hpp"
+#include "Caracteristique.hpp"
+#include "Jauge.hpp"
 
 class Creature {
 
 protected :
-  char * _nom[MAX_NOM] ;
+  char * _nom[MAX_NOM_CREATURE] ;
   Jauge _vie ;
   Jauge _mana ;
   std::map<Caracteristique, int> _carac ;
