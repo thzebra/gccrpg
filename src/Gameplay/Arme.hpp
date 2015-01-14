@@ -14,6 +14,7 @@ public :
   Arme() ;
   bool estAUneMain() ;
   int getAttaque() ;
+  Element getElement();
   virtual ~Arme() ;
 }
 

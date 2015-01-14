@@ -5,13 +5,13 @@
 
 class Palier {
 private :
-  int _paliers[PALIER_NIVEAU_MAX] ;
-  int fibonacci(int n) ;
+  static int _paliers[PALIER_NIVEAU_MAX];
   
-public :
   Palier() ;
-  int niveau(int exp) ;
   ~Palier() ;  
+public :
+  static int fibonacci(int n) ;
+  static int niveau(int exp) ;
 } ;
 
 #endif 

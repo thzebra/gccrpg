@@ -9,11 +9,12 @@ private :
 public :
   virtual Jauge(int max) ;
   virtual Jauge(int max, int niveau) ;
-  virtual bool estBleue() ;
-  virtual bool estRouge() ;
-  virtual bool estVerte() ;
+  virtual bool isNul() ;
+  bool isCritique() ;
+  bool isLessThanMoitie() ;
   virtual int getMax() ;
   virtual int getNiveau() ;
+  void modifier(int ajout) ;
   virtual ~Jauge() ;
 } ;
 

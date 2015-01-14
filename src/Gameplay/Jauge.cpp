@@ -10,16 +10,16 @@ Jauge::Jauge(int max, int niveau) {
   _niveau = niveau ;
 }
 
-bool Jauge::estVerte() {
-  return (_niveau <= _max && _niveau > 0) ;
+bool Jauge::isNul() {
+  return (_niveau == 0) ;
 }
 
-bool Jauge::estRouge() {
-  return (_niveau < 0) ;
+bool Jauge::isCritique() {
+  return (_niveau < (_max*.2)) ;
 }
 
-bool Jauge::estBleue() {
-  return (_niveau > max) ;
+bool Jauge::isLessThanMoitie() {
+  return (_niveau < _max*.5) ;
 }
 
 int Jauge::getMax() {
@@ -28,6 +28,10 @@ int Jauge::getMax() {
 
 int Jauge::getNiveau() {
   return _niveau ;
+}
+
+void modifier(int ajout){
+  return std::min(_max, std::max(0, _niveau + ajout));
 }
 
 Jauge::~Jauge() {}
