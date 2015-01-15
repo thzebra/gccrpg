@@ -12,7 +12,9 @@
 #include "Talent.hpp"
 #include "Enchantement.hpp"
 #include "Caracteristique.hpp"
+#include "Utilisable.hpp"
 
 int main() {
+  Perso toto = createPerso("titi", ELFE) ;
   return 0 ;
 }

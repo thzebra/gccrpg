@@ -1,9 +1,13 @@
 #ifndef __UTILISABLE_HPP__
 #define __UTILISABLE_HPP__
 
-#include "Ramassable.hpp"
+#include <list>
 
-class Utilisable : public Ramassable {
+#include "Creature.hpp"
+#include "Effet.hpp"
+#include "Objet.hpp"
+
+class Utilisable : public Objet {
 
 protected :
   std::list<Effet> _effets ;

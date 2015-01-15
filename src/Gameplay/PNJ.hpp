@@ -4,6 +4,8 @@
 #include "Humanoide.hpp"
 #include "Inventaire.hpp"
 
+class Objet ;
+
 class PNJ {
   
 private : 

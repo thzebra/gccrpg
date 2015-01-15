@@ -1,9 +1,13 @@
 #ifndef __ENCHANTEMENT_HPP__
 #define __ENCHANTEMENT_HPP__
 
+#include <map>
+
 #include "Element.hpp"
 #include "Caracteristique.hpp"
 #include "Objet.hpp"
+
+class Objet ;
 
 class Enchantement {
 protected :

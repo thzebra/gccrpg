@@ -3,6 +3,6 @@
 
 #include "Creature.hpp"
 
-class Monstre : public Creature {}
+class Monstre : public Creature {} ;
 
 #endif

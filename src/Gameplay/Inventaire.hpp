@@ -5,6 +5,8 @@
 
 #include "Objet.hpp"
 
+class Objet ;
+
 class Inventaire {
 
 protected :

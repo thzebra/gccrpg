@@ -16,10 +16,10 @@ public :
 	int defenseBase, int force, int dexterite, int chance,
 	int vitesse, Race_Humanoide race, Inventaire stuff, 
 	Coordonnees c = Coordonnees(0, 0)) ;
+  Perso Perso(char * nom, Race_Humanoide race) ;
   void upgradeTalent(Talent t) ;
   void forgetTalent(Talent t) ;
   int getTalentLevel(Talent t) ;
-  Perso createPerso(char * nom, Race_Humanoide race) ;
   ~Perso() ;
 } ;
 
