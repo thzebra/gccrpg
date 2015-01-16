@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -I$(SRCDIR)
+CFLAGS = -Wall -H -std=c++11
 
 _SOURCES = Coordonnees.cpp \
 	  Creature.cpp \
@@ -15,13 +15,13 @@ _SOURCES = Coordonnees.cpp \
 	  Talent.cpp \
 	  Utilisable.cpp \
 	  main.cpp
-SOURCES = $(patsubst %, $(SRCDIR)/%, $(_SOURCES))
+SOURCES = $(patsubst %,$(SRCDIR)/%,$(_SOURCES))
 
-_DEPS = $(patsubst %.cpp, %.o, $(_SOURCES))
+_DEPS = $(patsubst %.cpp,%.hpp,$(_SOURCES))
 DEPS = $(patsubst %, $(HDRDIR)/%, $(_DEPS))
 
-_OBJ = $(patsubst %.cpp, %.o, $(_SOURCES))
-OBJ = $(patsubst %, $(BUILDDIR)/%, $(_OBJ))
+_OBJ = $(patsubst %.cpp,%.o,$(_SOURCES))
+OBJ = $(patsubst %, $(BUILDDIR)/%,$(_OBJ))
 
 BUILDDIR = build
 SRCDIR = src/Gameplay
@@ -30,15 +30,14 @@ EXEC = main
 
 default : $(EXEC)
 
-build :
-	mkdir build
-
-$(BUILDDIR)/%.o : $(SRCDIR)/%.cpp $(DEPS) build
-	$(CC) -c -o $@ $(patsubst $(BUILDDIR)/%.o, $(SRCDIR)/%.cpp, $@) $(CFLAGS)
-
+$(BUILDDIR)/%.o : build
+	$(CC) -o $@ -c $(patsubst $(BUILDDIR)/%.o,$(SRCDIR)/%.cpp,$@) $(CFLAGS)
 
 $(EXEC) : $(OBJ)
 	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS)
+
+build :
+	mkdir $(BUILDDIR)
 
 clean :
 	rm -r $(BUILDDIR)

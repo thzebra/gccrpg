@@ -1,57 +1,86 @@
 #include "Creature.hpp"
-#include <cstring>
 
-Creature::Creature(char * nom, int vieMax, int attBase, int defBase, int str, int dex, int lck, int vitesse, Coordonnees c = Coordonnees(0, 0)) {
-  _nom = strcpy(_nom, nom) ;
-  _vie = Jauge(vieMax) ;
+Creature::Creature() {} 
+
+Creature::Creature(string nom, int vieMax, int manaMax, int attBase, int defBase, int str, int dex, int lck, int vitesse, Coordonnees * c) {
+  _nom = new string(nom) ;
+  _vie = new Jauge(vieMax) ;
+  _mana = new Jauge(manaMax) ;
   _attaqueBase = attBase ;
   _defenseBase = defBase ;
-  _carac = new std::map<Caracteristique, int> {
-    {(Caracteristique::FORCE, str)}, 
-    {(Caracteristique::DEXTERITE, dex)},
-    {(Caracteristique::CHANCE, lck)},
-    {(Caracteristique::VITESSE, vitesse)}
+  _carac = new map<Caracteristique, int> {
+    {Caracteristique::FORCE, str}, 
+    {Caracteristique::DEXTERITE, dex},
+    {Caracteristique::CHANCE, lck},
+    {Caracteristique::VITESSE, vitesse}
   };
-  _coordonnees = Coordonnees(&c) ;
+  _coordonnees = new Coordonnees(c) ;
 }
 
-void Creature::attaquer(Creature) {
+Creature::Creature(Creature &c) {
+  this->_nom = new string(*c.getNom()) ;
+  this->_vie = new Jauge(c.getVieMax()) ;
+  this->_mana = new Jauge(c.getManaMax()) ;
+  this->_attaqueBase = c.getAttaque() ;
+  this->_defenseBase = c.getDefense() ;
+  _carac = new map<Caracteristique, int> {
+    {Caracteristique::FORCE, c.getForce()}, 
+    {Caracteristique::DEXTERITE, c.getDexterite()},
+    {Caracteristique::CHANCE, c.getChance()},
+    {Caracteristique::VITESSE, c.getVitesse()}
+  };
+  _coordonnees = new Coordonnees(c.getCoordonnees()) ;  
+}
+
+void Creature::attaquer(Creature * c) {
   // des trucs
 }
 
-bool Creature::estVivant() {
-  return !_vie.estRouge() ;
+bool Creature::estVivant() const {
+  return !_vie->isNul() ;
 }
 
-Coordonnees Creature::getCoordonnees() {
+Coordonnees * Creature::getCoordonnees() const {
   return _coordonnees ;
 }
 
-std::list<Alteration> Creature::getEtat() {
-  // TODO
+list<Alteration> Creature::getEtat() const {
+  return _etat ;
 }
 
-std::list<Buff> Creature::getBuffs() {
-  // TODO
+list<Buff> Creature::getBuffs() const {
+  return _buffs ;
 }
 
-int Creature::getForce() {
-  return _carac.getForce() ;
+int Creature::getForce() const {
+  return (*_carac)[FORCE] ;
 }
 
-int Creature::getDexterite() {
-  return _carac.getDexterite() ;
+int Creature::getDexterite() const {
+  return (*_carac)[DEXTERITE] ;
 }
 
-int Creature::getChance() {
-  return _carac.getChance() ;
+int Creature::getChance() const {
+  return (*_carac)[CHANCE] ;
 }
 
-int Creature::getVitesse() {
-  return _carac.getVitesse() ;
+int Creature::getVitesse() const {
+  return _carac[VITESSE] ;
 }
 
-virtual Creature::~Creature() {
-  _vie.~Jauge() ;
-  _coordonnees.~Coordonnees() ;
+int Creature::getAttaque() const {
+  //  un itérateur et des trucs
+  return _attaqueBase ;
+}
+
+int Creature::getDefense() const {
+  //  un itérateur et des trucs
+  return _defenseBase ;
+}
+
+Creature::~Creature() {
+  _vie->~Jauge() ;
+  _mana->~Jauge() ;
+  _coordonnees->~Coordonnees() ;
+  delete _carac ;
 }

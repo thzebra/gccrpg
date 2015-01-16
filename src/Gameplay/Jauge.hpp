@@ -7,6 +7,7 @@ private :
   int _niveau ;
 
 public :
+  Jauge() ;
   Jauge(int max) ;
   Jauge(int max, int niveau) ;
   virtual bool isNul() ;

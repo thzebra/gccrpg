@@ -11,6 +11,6 @@ public :
   int getDefense() ;
   virtual ~Armure() ;
 
-}
+} ;
 
 #endif

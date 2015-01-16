@@ -13,6 +13,6 @@ public :
   Effet getEffet() ;
   virtual ~Parchemin() ;
 
-}
+} ;
 
 #endif

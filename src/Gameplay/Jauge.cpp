@@ -1,5 +1,7 @@
 #include "Jauge.hpp"
 
+Jauge::Jauge() {}
+
 Jauge::Jauge(int max) {
   _max = max ;
   _niveau = max ;

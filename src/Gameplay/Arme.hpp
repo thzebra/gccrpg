@@ -16,6 +16,6 @@ public :
   int getAttaque() ;
   Element getElement();
   virtual ~Arme() ;
-}
+} ;
 
 #endif

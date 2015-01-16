@@ -17,6 +17,6 @@ public :
   virtual void useObjet(Creature cible) ;
   virtual std::list<Effet> getEffets() ;
   virtual ~Utilisable() ;
-}
+} ;
 
 #endif

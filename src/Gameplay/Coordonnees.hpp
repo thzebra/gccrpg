@@ -8,7 +8,9 @@ protected :
   int _x, _y ;
 
 public :
-  Coordonnees(int x, int y) ;
+  Coordonnees(Coordonnees &c) ;
+  Coordonnees(Coordonnees *c) ;
+  Coordonnees(int x = 0, int y = 0) ;
   int getx() ;
   int gety() ;
   void moveHaut(int i = 1) ;

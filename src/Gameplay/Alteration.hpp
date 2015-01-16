@@ -4,6 +4,9 @@
 #include "Effet.hpp"
 
 class Alteration : public Effet {
+public :
+  int getModifAttaque() ;
+  int getModifDefense() ;
 } ;
 
 #endif
