@@ -1,11 +1,11 @@
 #include "Talent.hpp"
 #include <cstring>
 
-Talent::Talent(char * nom) {
-  strcpy(_nom, nom) ;
+Talent::Talent(string nom) {
+  _nom = new string(&nom) ;
 }
 
-char Talent::getNom() {
+string * Talent::getNom() {
   return _nom ;
 }
 

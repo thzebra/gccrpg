@@ -14,7 +14,10 @@ Creature::Creature(string nom, int vieMax, int manaMax, int attBase, int defBase
     {Caracteristique::CHANCE, lck},
     {Caracteristique::VITESSE, vitesse}
   };
-  _coordonnees = new Coordonnees(c) ;
+  if (c) 
+    _coordonnees = new Coordonnees(c) ;
+  else
+    _coordonnees = new Coordonnees(0, 0) ;
 }
 
 Creature::Creature(Creature &c) {
@@ -65,7 +68,7 @@ int Creature::getChance() const {
 }
 
 int Creature::getVitesse() const {
-  return _carac[VITESSE] ;
+  return (*_carac)[VITESSE] ;
 }
 
 int Creature::getAttaque() const {

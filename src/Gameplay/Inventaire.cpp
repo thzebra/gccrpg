@@ -8,27 +8,27 @@ Inventaire::Inventaire(){
 
 int Inventaire::getPoidsTotal() const{
   int poids = 0;
-  for(Objet item : _stuff)
+  for (const Objet &item : *_stuff)
     poids += item.getPoids(); // :)
   return poids;
 }
 
 
-bool Inventaire::contient(Objet obj) const{
-  for(Objet item : _stuff)
+bool Inventaire::contient(Objet &obj) const{
+  for(Objet &item : *_stuff)
     if(item == obj)
       return true;
   return false;
 }
 
 
-void Inventaire::retirer(Objet obj){
-  _stuff.remove(obj) ;
+void Inventaire::retirer(Objet & obj){
+  _stuff->erase(std::find(_stuff->begin(), _stuff->end(), obj)) ;
 }
 
 
-void Inventaire::ajouter(Objet obj){
-  _stuff.add(obj);
+void Inventaire::ajouter(Objet & obj){
+  _stuff->push_front(obj) ;
 }
 
 
@@ -36,3 +36,5 @@ Inventaire::~Inventaire(){
   delete _stuff;
 }
 
+
+  

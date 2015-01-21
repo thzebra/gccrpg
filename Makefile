@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -H -std=c++11
+CFLAGS = -Wall -std=c++11
 
 _SOURCES = Coordonnees.cpp \
 	  Creature.cpp \
@@ -7,14 +7,13 @@ _SOURCES = Coordonnees.cpp \
 	  Humanoide.cpp \
 	  Inventaire.cpp \
 	  Jauge.cpp \
-	  main.cpp \
 	  Objet.cpp \
 	  Palier.cpp \
 	  Perso.cpp \
 	  PNJ.cpp \
 	  Talent.cpp \
-	  Utilisable.cpp \
-	  main.cpp
+	  Utilisable.cpp
+
 SOURCES = $(patsubst %,$(SRCDIR)/%,$(_SOURCES))
 
 _DEPS = $(patsubst %.cpp,%.hpp,$(_SOURCES))
@@ -34,7 +33,7 @@ $(BUILDDIR)/%.o : build
 	$(CC) -o $@ -c $(patsubst $(BUILDDIR)/%.o,$(SRCDIR)/%.cpp,$@) $(CFLAGS)
 
 $(EXEC) : $(OBJ)
-	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS)
+	$(CC) -o $(EXEC) $(EXEC).cpp $(OBJ) $(CFLAGS)
 
 build :
 	mkdir $(BUILDDIR)

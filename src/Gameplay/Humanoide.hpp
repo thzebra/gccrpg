@@ -11,10 +11,11 @@ protected :
   Race_Humanoide _race ;
   
 public :
-  Humanoide(char * nom, int vie, int mana, int attaqueBase,
+  Humanoide() ;
+  Humanoide(string nom, int vie, int mana, int attaqueBase,
 	    int defenseBase, int force, int dexterite, int chance,
 	    int vitesse, int charisme, int intelligence,
-	    Race_Humanoide race, Coordonnees c = Coordonnees(0, 0)) ;
+	    Race_Humanoide race, Coordonnees * c) ;
   virtual int getCharisme() const ;
   virtual int getIntelligence() const ;
   virtual ~Humanoide() ;

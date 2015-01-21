@@ -12,4 +12,6 @@ typedef enum{
   INTELLIGENCE
 } Caracteristique ;
 
+
+
 #endif

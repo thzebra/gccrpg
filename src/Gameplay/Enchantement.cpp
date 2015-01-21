@@ -4,8 +4,10 @@ Enchantement::Enchantement(Element elt, std::map<Caracteristique, int> modifCara
   _elt = elt ;
   _modifAttaque = modifAttaque ;
   _modifDefense = modifDefense ;
-  _modifCaracs = new std::map<Caracteristique, int> ;
-  for (Caracteristique c : modifCarac) {
+  _modifCaracs = new map<Caracteristique, int> ;
+  for (map<Caracteristique, int>::iterator it = _modifCaracs->begin() ;
+       it != _modifCaracs->end() ;
+       ++it) {
     // des trucs
   }
 }
@@ -15,7 +17,7 @@ Element Enchantement::getElement() {
 }
 
 int Enchantement::getModificateur(Caracteristique c) {
-  return _modifCaracs[c] ;
+  return (*_modifCaracs)[c] ;
 }
 
 int Enchantement::getModifDefense() {

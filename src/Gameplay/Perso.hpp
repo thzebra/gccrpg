@@ -9,14 +9,18 @@
 class Perso : public PNJ {
 
 protected :
-  std::map<Talent, int> _talents ;
+  std::map<Talent, int> * _talents ;
   
 public :
-  Perso(char * nom, int vie, int mana, int attaqueBase,
+  Perso() ;
+  Perso(string nom, int vie, int mana, int attaqueBase,
 	int defenseBase, int force, int dexterite, int chance,
-	int vitesse, Race_Humanoide race, Inventaire stuff, 
-	Coordonnees c = Coordonnees(0, 0)) ;
-  Perso Perso(char * nom, Race_Humanoide race) ;
+	int vitesse, int charisme, int intelligence,
+	Race_Humanoide race, Coordonnees * c) ;
+  Perso * createPerso(string nom, Race_Humanoide race) ;
+  Perso * createElfe(string nom) ;
+  Perso * createOrc(string nom) ;
+  Perso * createHumain(string nom) ;
   void upgradeTalent(Talent t) ;
   void forgetTalent(Talent t) ;
   int getTalentLevel(Talent t) ;

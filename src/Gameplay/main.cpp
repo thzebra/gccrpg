@@ -15,6 +15,6 @@
 #include "Utilisable.hpp"
 
 int main() {
-  Perso toto = createPerso("titi", ELFE) ;
+  Perso * toto = ((Perso*)nullptr)->createPerso("titi", ELFE) ;
   return 0 ;
 }

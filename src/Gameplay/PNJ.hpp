@@ -5,19 +5,20 @@
 #include "Inventaire.hpp"
 
 class Objet ;
+class Inventaire ;
 
 class PNJ {
   
-private : 
-  Inventaire _stuff ;
-  Humanoide _corps ;
+protected : 
+  Inventaire * _stuff ;
+  Humanoide * _corps ;
   
 public :
-  PNJ(char * nom, int vie, int mana,
+  PNJ() ;
+  PNJ(string nom, int vie, int mana,
       int attaqueBase, int defenseBase,
       int force, int dexterite, int chance, int vitesse,
-      Race_Humanoide race,
-      Inventaire stuff, Coordonnees c = Coordonnees(0, 0)) ;
+      Race_Humanoide race, Coordonnees * c) ;
   virtual int getPoids() const ;
   virtual int getPoidsMax() const ;
   virtual void utiliserObjet(Objet o, Creature c) ;
@@ -27,9 +28,9 @@ public :
   virtual int getPrix(Objet o) const ;
   virtual void vendre(Objet o) ;
   virtual int getSous() const ;
-  virtual PNJ createElfe(char * nom) ;
-  virtual PNJ createOrc(char * nom) ;
-  virtual PNJ createHumain(char * nom) ;
+  virtual PNJ * createElfe(string nom) ;
+  virtual PNJ * createOrc(string nom) ;
+  virtual PNJ * createHumain(string nom) ;
   virtual ~PNJ() ;
 } ;
 

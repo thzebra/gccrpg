@@ -11,23 +11,22 @@
 
 #define MAX_NOM_OBJET 50
 
-#include <list>
+#include "GeneralIncludes.hpp"
 
-#include "Element.hpp"
-#include "Enchantement.hpp"
-#include "Talent.hpp"
+class Enchantement ;
+class Perso ;
 
 class Objet {
 protected :
-  char _nom[MAX_NOM_OBJET] ;
+  string * _nom ;
   int _poids ;
   int _valeur ;
   Element _elt ;
-  std::list<Enchantement> _enchantements ;
+  std::list<Enchantement> * _enchantements ;
   
 public :
-  Objet(char * nom, int poids, int valeur) ;
-  virtual char * getNom() const ;
+  Objet(string nom, int poids, int valeur) ;
+  virtual string * getNom() const ;
   virtual int getPoids() const ;
   virtual int getValeur() const ;
   virtual int getModificateur(Talent t) ;
@@ -37,6 +36,7 @@ public :
   virtual void utiliser(Perso p) ;
   virtual Talent getTalent() ;
   virtual Element getElement() ;
+  bool operator==(const Objet & obj) const ;
   virtual ~Objet() ;
 } ;
 

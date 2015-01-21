@@ -1,9 +1,7 @@
 #include "Utilisable.hpp"
-#include <cstring>
+#include "GeneralIncludes.hpp"
 
-zRamassable::Ramassable(
+Utilisable::Utilisable() {}
 
-
-
-Utilisable::Utilisable(char * nom, Talent t, int modif, int poids, int qte, int valeur, Emplacement e) {
+Utilisable::Utilisable(string nom, Talent t, int modif, int poids, int qte, int valeur, Emplacement e) {}
   

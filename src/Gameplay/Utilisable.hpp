@@ -13,7 +13,8 @@ protected :
   std::list<Effet> _effets ;
   
 public :
-  Utilisable(char * nom, int poids, int valeur) ;
+  Utilisable() ;
+  Utilisable(string nom, int poids, int valeur) ;
   virtual void useObjet(Creature cible) ;
   virtual std::list<Effet> getEffets() ;
   virtual ~Utilisable() ;

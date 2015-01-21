@@ -6,13 +6,15 @@
 #include "Element.hpp"
 #include "Caracteristique.hpp"
 #include "Objet.hpp"
+#include "GeneralIncludes.hpp"
+
 
 class Objet ;
 
 class Enchantement {
 protected :
   Element _elt ;
-  std::map<Caracteristique, int> _modifCaracs ;
+  map<Caracteristique, int> * _modifCaracs ;
   int _modifAttaque ;
   int _modifDefense ;
   

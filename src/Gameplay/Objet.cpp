@@ -1,28 +1,30 @@
 #include "Objet.hpp"
-#include <cstring>
 
-Objet::Objet(char * nom, int poids, int valeur) {
-  strcpy(_nom, nom) ;
+Objet::Objet(string nom, int poids, int valeur) {
+  _nom = new string(nom) ;
   _poids = poids ;
   _valeur = valeur ;
   _enchantements = new std::list<Enchantement> ;
   _elt = NEUTRE ;
 }
 
-char * Objet::getNom() const {
+string * Objet::getNom() const {
   return _nom ;
 }
 
-int Objet::getPoids() {
+int Objet::getPoids() const {
   return _poids ;
 }
 
-int Objet::getValeur() {
+int Objet::getValeur() const {
   return _valeur ;
 }
 
 int Objet::getModificateur(Caracteristique c) {
-  return _enchantements.getModificateur(c) ;
+  int modif = 0 ;
+  for (Enchantement &ench : *_enchantements)
+    modif += ench.getModificateur(c) ;
+  return modif ;
 }
 
 void Objet::utiliser(Perso p) {
@@ -31,6 +33,10 @@ void Objet::utiliser(Perso p) {
 
 Element Objet::getElement() {
   return _elt ;
+}
+
+bool Objet::operator==(const Objet & obj) const {
+  return (this->_nom)->compare(*(obj._nom)) ;
 }
 
 Objet::~Objet() {

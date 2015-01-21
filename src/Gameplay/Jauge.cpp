@@ -32,8 +32,15 @@ int Jauge::getNiveau() {
   return _niveau ;
 }
 
-void modifier(int ajout){
-  return std::min(_max, std::max(0, _niveau + ajout));
+void Jauge::modifier(int ajout){
+  if (_niveau + ajout > _max)
+    _niveau = _max ;
+  else {
+    if (_niveau + ajout < 0)
+      _niveau = 0 ;
+    else
+      _niveau += ajout ;
+  }
 }
 
 Jauge::~Jauge() {}
