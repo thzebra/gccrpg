@@ -1,7 +1,7 @@
 #ifndef __PERSO_HPP__
 #define __PERSO_HPP__
 
-#include <map>
+#include "GeneralIncludes.hpp"
 
 #include "PNJ.hpp"
 #include "Talent.hpp"

@@ -1,4 +1,4 @@
-CC = g++
+
 CFLAGS = -Wall -std=c++11
 
 _SOURCES = Coordonnees.cpp \
@@ -30,10 +30,10 @@ EXEC = main
 default : $(EXEC)
 
 $(BUILDDIR)/%.o : build
-	$(CC) -o $@ -c $(patsubst $(BUILDDIR)/%.o,$(SRCDIR)/%.cpp,$@) $(CFLAGS)
+	$(CXX) -o $@ -c $(patsubst $(BUILDDIR)/%.o,$(SRCDIR)/%.cpp,$@) $(CFLAGS)
 
 $(EXEC) : $(OBJ)
-	$(CC) -o $(EXEC) $(EXEC).cpp $(OBJ) $(CFLAGS)
+	$(CXX) -o $(EXEC) $(EXEC).cpp $(OBJ) $(CFLAGS)
 
 build :
 	mkdir $(BUILDDIR)

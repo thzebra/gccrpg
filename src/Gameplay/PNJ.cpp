@@ -5,10 +5,11 @@ PNJ::PNJ() {}
 PNJ::PNJ(string nom, int vie, int mana,
 	 int attaqueBase, int defenseBase,
 	 int force, int dexterite, int chance,
-	 int vitesse, Coordonnees * c) {
+	 int vitesse, int charisme, int intelligence, Race_Humanoide race, Coordonnees * c) {
   _corps = new Humanoide(nom, vie, mana, attaqueBase,
-		     defenseBase, force, dexterite,
-		     chance, vitesse, stuff, c) ;
+			 defenseBase, force, dexterite,
+			 chance, vitesse, charisme, intelligence, race,
+			 c) ;
   _stuff = new Inventaire() ;
 }
 

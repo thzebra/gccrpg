@@ -18,6 +18,7 @@ public :
   PNJ(string nom, int vie, int mana,
       int attaqueBase, int defenseBase,
       int force, int dexterite, int chance, int vitesse,
+      int charisme, int intelligence,
       Race_Humanoide race, Coordonnees * c) ;
   virtual int getPoids() const ;
   virtual int getPoidsMax() const ;
