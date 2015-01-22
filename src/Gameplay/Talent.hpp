@@ -2,20 +2,19 @@
 #define __TALENT_HPP__
 
 // on avait pas dit que talent c'était une enum ?
+// si si
 
 #include "GeneralIncludes.hpp"
 
 #define MAX_NOM 50
 
-class Talent {
-
-protected :
-  string * _nom ;
-  
-public :
-  Talent (string nom) ;
-  string * getNom() ;
-  ~Talent() ;
+enum Talent {
+  CUIREPATATES,
+  MANGERPATATES,
+  TAPERENNEMI,
+  DUMMYTALENT1,
+  DUMMYTALENT2,
+  RESPIRER
 } ;
 
 #endif

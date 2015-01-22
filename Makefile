@@ -9,8 +9,8 @@ _SOURCES = Coordonnees.cpp \
 	  Jauge.cpp \
 	  Objet.cpp \
 	  Palier.cpp \
-	  Perso.cpp \
 	  PNJ.cpp \
+	  Perso.cpp \
 	  Talent.cpp \
 	  Utilisable.cpp
 

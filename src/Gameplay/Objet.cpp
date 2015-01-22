@@ -27,10 +27,6 @@ int Objet::getModificateur(Caracteristique c) {
   return modif ;
 }
 
-void Objet::utiliser(Perso p) {
-  p.upgradeTalent(getTalent()) ;
-}
-
 Element Objet::getElement() {
   return _elt ;
 }

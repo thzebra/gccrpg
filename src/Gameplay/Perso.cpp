@@ -26,16 +26,15 @@ Perso * Perso::createPerso(string nom, Race_Humanoide race) {
 }
 
 void Perso::upgradeTalent(Talent t) {
-  //  ++(*_talents)[t] ;
+  ++(*_talents)[t] ;
 }
 
 void Perso::forgetTalent(Talent t) {
-  //  --(*_talents)[t] ;
+  --(*_talents)[t] ;
 }
 
 int Perso::getTalentLevel(Talent t) {
-  //  return Palier::niveau((*_talents)[t]) ;
-  return 0 ;
+  return Palier::niveau((*_talents)[t]) ;
 }
 
 Perso * Perso::createElfe(string nom) {
@@ -58,6 +57,12 @@ Perso * Perso::createHumain(string nom) {
 			      new Coordonnees(0, 0)) ;
   return newHumain ;
 }
+
+void Perso::utiliserObjet(Objet o, Creature c) {
+  // rien
+  upgradeTalent(o.getTalent()) ;
+}
+
 
 Perso::~Perso() {
   _stuff->Inventaire::~Inventaire() ;

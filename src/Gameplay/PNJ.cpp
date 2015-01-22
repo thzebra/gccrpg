@@ -22,8 +22,8 @@ int PNJ::getPoidsMax() {
   return _corps->getForce() * 50 ;
 }
 
-void PNJ::utiliserObjet(Objet &o, Creature c) {
-  // kedalle pour l'instant
+void PNJ::utiliserObjet(Objet o, Creature c) {
+  // rien
 }
 
 void PNJ::pickObjet(Objet &o) {

@@ -33,7 +33,6 @@ public :
   virtual int getModificateur(Caracteristique c) ;
   virtual int getAttaque() ;
   virtual int getDefense() ;
-  virtual void utiliser(Perso p) ;
   virtual Talent getTalent() ;
   virtual Element getElement() ;
   bool operator==(const Objet & obj) const ;
