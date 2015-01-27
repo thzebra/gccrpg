@@ -23,6 +23,22 @@ int Coordonnees::gety() {
   return _y ;
 }
 
+void Coordonnees::moveDir(Direction d, int i) {
+  switch (d) {
+  case HAUT :
+    Coordonnees::moveHaut(i) ;
+    break ;
+  case BAS :
+    Coordonnees::moveBas(i) ;
+    break ;
+  case GAUCHE :
+    Coordonnees::moveGauche(i) ;
+    break ;
+  case DROITE :
+    Coordonnees::moveDroite(i) ;
+  }
+}
+
 void Coordonnees::moveHaut(int i) {
   _y += i ;
 }

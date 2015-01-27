@@ -6,17 +6,18 @@
 #include "Creature.hpp"
 #include "Effet.hpp"
 #include "Objet.hpp"
+#include "GeneralIncludes.hpp"
 
 class Utilisable : public Objet {
 
 protected :
-  std::list<Effet> _effets ;
+  std::list<Effet> * _effets ;
   
 public :
   Utilisable() ;
   Utilisable(string nom, int poids, int valeur) ;
-  virtual void useObjet(Creature cible) ;
-  virtual std::list<Effet> getEffets() ;
+  virtual void useObjet(Creature &cible) ;
+  virtual std::list<Effet> * getEffets() ;
   virtual ~Utilisable() ;
 } ;
 

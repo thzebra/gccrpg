@@ -37,9 +37,9 @@ int Palier::niveau(int exp) {
 Palier::~Palier() {
 }
 
-int main(){
-  Palier::fibonacci(20);
-  for(int i = 0 ; i<10 ; i++)
-    cout << Palier::niveau(i*10000) << endl;
-  return 0;
-}
+// int main(){
+//   Palier::fibonacci(20);
+//   for(int i = 0 ; i<10 ; i++)
+//     cout << Palier::niveau(i*10000) << endl;
+//   return 0;
+// }

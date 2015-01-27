@@ -5,10 +5,14 @@ class Effet {
 
 protected :
   int _timer ;
+  bool _aCommence ;
   
 public :
+  Effet() ;
   Effet(int t) ;
   virtual bool isFini() const ;
+  virtual void endEffet() ;
+  virtual void step() ;
   virtual ~Effet() ;
 } ;
 

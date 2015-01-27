@@ -1,5 +1,7 @@
 #include "Objet.hpp"
 
+Objet::Objet() {}
+
 Objet::Objet(string nom, int poids, int valeur) {
   _nom = new string(nom) ;
   _poids = poids ;
@@ -19,6 +21,23 @@ int Objet::getPoids() const {
 int Objet::getValeur() const {
   return _valeur ;
 }
+
+int Objet::getModificateur(Talent t) {
+  return 0 ;
+}
+
+int Objet::getAttaque() {
+  return 0 ;
+}
+
+int Objet::getDefense() {
+  return 0 ;
+}
+
+Talent Objet::getTalent() {
+  return NOTALENT ;
+}
+
 
 int Objet::getModificateur(Caracteristique c) {
   int modif = 0 ;

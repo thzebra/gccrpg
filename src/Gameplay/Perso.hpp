@@ -6,6 +6,8 @@
 #include "PNJ.hpp"
 #include "Talent.hpp"
 
+
+
 class Perso : public PNJ {
 
 protected :

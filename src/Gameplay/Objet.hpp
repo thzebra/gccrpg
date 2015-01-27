@@ -4,7 +4,6 @@
 #include <list>
 
 #include "Talent.hpp"
-#include "Perso.hpp"
 #include "Element.hpp"
 #include "Enchantement.hpp"
 #include "Caracteristique.hpp"
@@ -14,7 +13,6 @@
 #include "GeneralIncludes.hpp"
 
 class Enchantement ;
-class Perso ;
 
 class Objet {
 protected :
@@ -25,6 +23,7 @@ protected :
   std::list<Enchantement> * _enchantements ;
   
 public :
+  Objet() ;
   Objet(string nom, int poids, int valeur) ;
   virtual string * getNom() const ;
   virtual int getPoids() const ;

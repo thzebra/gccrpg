@@ -9,6 +9,7 @@
 #define MAX_NOM 50
 
 enum Talent {
+  NOTALENT,
   CUIREPATATES,
   MANGERPATATES,
   TAPERENNEMI,

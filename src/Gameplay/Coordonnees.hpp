@@ -13,6 +13,7 @@ public :
   Coordonnees(int x = 0, int y = 0) ;
   int getx() ;
   int gety() ;
+  void moveDir(Direction d, int i = 1) ;
   void moveHaut(int i = 1) ;
   void moveBas(int i = 1) ;
   void moveGauche(int i = 1) ;

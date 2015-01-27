@@ -11,6 +11,8 @@
 #include "Coordonnees.hpp"
 #include "Jauge.hpp"
 
+class Alteration ;
+
 class Creature {
 
 protected :
@@ -21,8 +23,8 @@ protected :
   int _attaqueBase ;
   int _defenseBase ;
   Coordonnees * _coordonnees ;
-  list<Buff> _buffs ;
-  list<Alteration> _etat ;
+  list<Buff> * _buffs ;
+  list<Alteration> * _etat ;
   
   
 public :
@@ -41,16 +43,18 @@ public :
   virtual int getVieMax() const ;
   virtual int getMana() const ;
   virtual int getManaMax() const ;
+  virtual void modifVie(int i) ;
+  virtual void modifMana(int i) ;
+  virtual void modifCarac(Caracteristique carac, int i) ;
   virtual Coordonnees * getCoordonnees() const ;
-  virtual list<Alteration> getEtat() const ;
-  virtual list<Buff> getBuffs() const ;
-  virtual void addAlteration(Alteration a) ;
-  virtual void removeAlteration(Alteration a) ;
-  virtual void addBuff(Buff b) ;
-  virtual void removeBuff(Buff b) ;
-  virtual void updateStat() ;
+  virtual list<Alteration> * getEtat() const ;
+  virtual list<Buff> * getBuffs() const ;
+  virtual void addAlteration(Alteration &a) ;
+  virtual void removeAlteration(Alteration &a) ;
+  virtual void addBuff(Buff &b) ;
+  virtual void removeBuff(Buff &b) ;
   virtual void attaquer(Creature * c) ;
-  virtual void bouger(Direction d) ;
+  virtual void bouger(Direction d, int npas = 1) ;
   virtual ~Creature() ;
 } ;
 

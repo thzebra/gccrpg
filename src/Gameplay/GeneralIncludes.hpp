@@ -9,5 +9,6 @@
 using std::string ;
 using std::list ;
 using std::map ;
+using std::pair ;
 
 #endif

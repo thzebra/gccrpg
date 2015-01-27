@@ -14,10 +14,10 @@ PNJ::PNJ(string nom, int vie, int mana,
 }
 
 int PNJ::getPoids() const {
-  return _stuff->getPoids() ;
+  return _stuff->getPoidsTotal() ;
 }
 
-int PNJ::getPoidsMax() {
+int PNJ::getPoidsMax() const {
   // TODO j'ai mis un truc au pif
   return _corps->getForce() * 50 ;
 }
@@ -28,49 +28,53 @@ void PNJ::utiliserObjet(Objet o, Creature c) {
 
 void PNJ::pickObjet(Objet &o) {
   if (o.getPoids() + getPoids() <= getPoidsMax()) {
-    _stuff->ajouter(&o) ;
+    _stuff->ajouter(o) ;
   }
 }
 
-void PNJ::dumpObjet(Objet &o) {
-  _stuff->retirer(&o) ;
+void PNJ::pickSous(int s) {
+  _stuff->pickSous(s) ;
 }
 
-int PNJ::getPrix(Objet &o) {
-  return o.getPrix() ;
+void PNJ::dumpObjet(Objet &o) {
+  _stuff->retirer(o) ;
+}
+
+int PNJ::getPrix(Objet &o) const {
+  return o.getValeur() ;
 }
 
 void PNJ::vendre(Objet &o) {
-  _stuff->retirer(&o) ;
-  _stuff->pickSous(o->getPrix()) ;
+  _stuff->retirer(o) ;
+  _stuff->pickSous(o.getValeur()) ;
 }
 
-void PNJ::getSous() {
+int PNJ::getSous() const {
   return _stuff->getSous() ;
 }
 
 PNJ * PNJ::createElfe(string nom) {
-  PNJ newElfe = new PNJ(nom, 
-			20, 20, 4, 4, 3, 6, 5, 5, ELFE,
-			new Inventaire(), new Coordonnees(0, 0)) ;
+  PNJ * newElfe = new PNJ(nom, 
+			20, 20, 4, 4, 3, 6, 5, 5, 8, 6, ELFE,
+			new Coordonnees(0, 0)) ;
   return newElfe ;
 }
 
 PNJ * PNJ::createOrc(string nom) {
-  PNJ newOrc = new PNJ(nom,
-		       40, 14, 7, 6, 6, 2, 7, 3, ORC,
-		       new Inventaire(), new Coordonnees(0, 0)) ;
+  PNJ *  newOrc = new PNJ(nom,
+		       40, 14, 7, 6, 6, 2, 7, 3, 4, 8, ORC,
+		       new Coordonnees(0, 0)) ;
   return newOrc ;
 }
 
 PNJ * PNJ::createHumain(string nom) {
-  PNJ newHumain = new PNJ(nom,
-			  30, 17, 5, 5, 4, 4, 6, 4, HUMAIN,
-			  new Inventaire(), new Coordonnees(0, 0)) ;
+  PNJ * newHumain = new PNJ(nom,
+			  30, 17, 5, 5, 4, 4, 6, 4, 6, 7, HUMAIN,
+			  new Coordonnees(0, 0)) ;
   return newHumain ;
 }
 
-void PNJ::~PNJ() {
+PNJ::~PNJ() {
   _stuff->~Inventaire() ;
   _corps->~Humanoide() ;
 }

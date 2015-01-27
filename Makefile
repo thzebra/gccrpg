@@ -9,10 +9,14 @@ _SOURCES = Coordonnees.cpp \
 	  Jauge.cpp \
 	  Objet.cpp \
 	  Palier.cpp \
+	  Effet.cpp \
+	  Stat.cpp \
+	  Buff.cpp \
+	  Alteration.cpp \
 	  PNJ.cpp \
 	  Perso.cpp \
-	  Talent.cpp \
-	  Utilisable.cpp
+	  Utilisable.cpp \
+	  main.cpp
 
 SOURCES = $(patsubst %,$(SRCDIR)/%,$(_SOURCES))
 
@@ -33,10 +37,10 @@ $(BUILDDIR)/%.o : build
 	$(CXX) -o $@ -c $(patsubst $(BUILDDIR)/%.o,$(SRCDIR)/%.cpp,$@) $(CFLAGS)
 
 $(EXEC) : $(OBJ)
-	$(CXX) -o $(EXEC) $(EXEC).cpp $(OBJ) $(CFLAGS)
+	$(CXX) -o $(EXEC) $(OBJ) $(CFLAGS)
 
 build :
 	mkdir $(BUILDDIR)
 
 clean :
-	rm -r $(BUILDDIR)
+	rm -r $(BUILDDIR) $(EXEC)

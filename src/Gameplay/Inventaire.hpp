@@ -21,7 +21,7 @@ public :
   virtual void ajouter(Objet&obj) ;
   virtual void vendre(Objet &o) ;
   virtual int getSous() ;
-  virtual void pickSous() ;
+  virtual void pickSous(int s) ;
   virtual ~Inventaire() ;
 } ;
 

@@ -5,10 +5,10 @@ Enchantement::Enchantement(Element elt, std::map<Caracteristique, int> modifCara
   _modifAttaque = modifAttaque ;
   _modifDefense = modifDefense ;
   _modifCaracs = new map<Caracteristique, int> ;
-  for (map<Caracteristique, int>::iterator it = _modifCaracs->begin() ;
-       it != _modifCaracs->end() ;
+  for (map<Caracteristique, int>::iterator it = modifCarac.begin() ;
+       it != modifCarac.end() ;
        ++it) {
-    // des trucs
+    (*_modifCaracs)[it->first] = modifCarac[it->first] ;
   }
 }
 
