@@ -58,11 +58,17 @@ Perso * Perso::createHumain(string nom) {
   return newHumain ;
 }
 
-void Perso::utiliserObjet(Objet o, Creature c) {
-  // rien
+void Perso::utiliserObjet(Utiliser u, Creature c) {
+  u.useObject(&c) ;
   upgradeTalent(o.getTalent()) ;
 }
 
+void Perso::infosTexte() {
+  std::cout << "carac perso :\n" ;
+  _corps->infosTexte() ;
+  std::cout << "inventaire :\n" ;
+  _stuff->infosTexte() ;
+}
 
 Perso::~Perso() {
   _stuff->Inventaire::~Inventaire() ;

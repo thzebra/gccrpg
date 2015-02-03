@@ -5,6 +5,7 @@
 #include <map>
 #include <string>
 #include <list>
+#include <iostream>
 
 using std::string ;
 using std::list ;

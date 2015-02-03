@@ -31,7 +31,7 @@ public :
   Creature() ;
   Creature(string nom , int vie, int mana, int attaqueBase, int defenseBase, int force, int dexterite, int chance, int vitesse, Coordonnees * c) ;
   Creature(Creature &c) ;
-  virtual string * getNom() const ;
+  virtual string getNom() const ;
   virtual bool estVivant() const ;
   virtual int getForce() const ;
   virtual int getDexterite() const ;
@@ -55,6 +55,7 @@ public :
   virtual void removeBuff(Buff &b) ;
   virtual void attaquer(Creature * c) ;
   virtual void bouger(Direction d, int npas = 1) ;
+  virtual void infosTexte() ;
   virtual ~Creature() ;
 } ;
 

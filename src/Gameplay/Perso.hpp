@@ -26,7 +26,8 @@ public :
   void upgradeTalent(Talent t) ;
   void forgetTalent(Talent t) ;
   int getTalentLevel(Talent t) ;
-  void utiliserObjet(Objet o, Creature c) ;
+  void utiliserObjet(Utilisable u, Creature c) ;
+  void infosTexte() ;
   ~Perso() ;
 } ;
 

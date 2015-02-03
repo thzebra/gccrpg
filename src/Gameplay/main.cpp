@@ -17,5 +17,13 @@
 int main() {
   Perso * toto = new Perso() ;
   toto = toto->Perso::createPerso("titi", ELFE) ;
+  toto->infosTexte() ;
+  Objet * truc = new Objet("cube", 3, 2) ;
+  truc->infosTexte() ;
+  std::cout << std::endl ;
+  toto->pickObjet(*truc) ;
+  toto->pickSous(-34) ;
+  toto->infosTexte() ;
+  truc->infosTexte() ;
   return 0 ;
 }

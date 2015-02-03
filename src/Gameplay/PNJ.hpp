@@ -4,6 +4,7 @@
 #include "Humanoide.hpp"
 #include "Inventaire.hpp"
 #include "Objet.hpp"
+#include "Utilisable.hpp"
 
 class Objet ;
 class Inventaire ;
@@ -23,7 +24,7 @@ public :
       Race_Humanoide race, Coordonnees * c) ;
   virtual int getPoids() const ;
   virtual int getPoidsMax() const ;
-  virtual void utiliserObjet(Objet o, Creature c) ;
+  virtual void utiliserObjet(Utilisable u, Creature c) ;
   virtual void pickObjet(Objet &o) ;
   virtual void pickSous(int s) ;
   virtual void dumpObjet(Objet &o) ;
@@ -33,6 +34,7 @@ public :
   virtual PNJ * createElfe(string nom) ;
   virtual PNJ * createOrc(string nom) ;
   virtual PNJ * createHumain(string nom) ;
+  virtual void mourir() ;
   virtual ~PNJ() ;
 } ;
 

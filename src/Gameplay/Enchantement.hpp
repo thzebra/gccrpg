@@ -19,6 +19,7 @@ protected :
   int _modifDefense ;
   
 public :
+  Enchantement() ;
   Enchantement(Element elt, std::map<Caracteristique, int> modifCaracs, int modifAttaque, int modifDefense) ;
   Element getElement() ;
   int getModificateur(Caracteristique c) ;

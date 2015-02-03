@@ -11,11 +11,12 @@
 class Utilisable : public Objet {
 
 protected :
-  std::list<Effet> * _effets ;
+  list<Effet> * _effets ;
+  enum Talent _talent ;
   
 public :
   Utilisable() ;
-  Utilisable(string nom, int poids, int valeur) ;
+  Utilisable(string nom, int poids, int valeur, enum Talent t = NOTALENT) ;
   virtual void useObjet(Creature &cible) ;
   virtual std::list<Effet> * getEffets() ;
   virtual ~Utilisable() ;

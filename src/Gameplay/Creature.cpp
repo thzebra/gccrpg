@@ -23,7 +23,7 @@ Creature::Creature(string nom, int vieMax, int manaMax, int attBase, int defBase
 }
 
 Creature::Creature(Creature &c) {
-  this->_nom = new string(*c.getNom()) ;
+  this->_nom = new string(c.getNom()) ;
   this->_vie = new Jauge(c.getVieMax()) ;
   this->_mana = new Jauge(c.getManaMax()) ;
   this->_attaqueBase = c.getAttaque() ;
@@ -41,8 +41,8 @@ void Creature::attaquer(Creature * c) {
   // des trucs
 }
 
-string * Creature::getNom() const {
-  return _nom ;
+string Creature::getNom() const {
+  return *_nom ;
 }
 
 int Creature::getVie() const {
@@ -115,6 +115,12 @@ void Creature::addBuff(Buff &b) {
   _buffs->push_front(b) ;
 }
 void Creature::removeBuff(Buff &b) {}
+
+void Creature::infosTexte() {
+  std::cout << *_nom << "(" << getCoordonnees()->getx() << ", " << getCoordonnees()->gety() << ")" ;
+    std::cout << " | Vie : " << getVie() << "/" << getVieMax() ;
+    std::cout << " | Mana : " << getMana() << "/" << getManaMax() << std::endl ;
+}
 
 void Creature::modifVie(int i) {
   _vie->modifier(i) ;

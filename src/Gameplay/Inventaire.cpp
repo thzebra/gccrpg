@@ -1,7 +1,7 @@
 #include "Inventaire.hpp"
 
 Inventaire::Inventaire(){
-  _stuff = new std::list<Objet>();
+  _stuff = new std::list<Objet>(0) ;
   _sous = 0 ;
 }
 
@@ -41,10 +41,25 @@ int Inventaire::getSous() {
 }
 
 void Inventaire::pickSous(int s) {
-  _sous += s ;
+  if (_sous + s >= 0)
+    _sous += s ;
+  else
+    _sous = 0 ;
 }
 
+void Inventaire::infosTexte() {
+  std::cout << "<Inventaire>\n" ;
+  std::cout << _sous << " sous | poids : " << getPoidsTotal() << "\n";
+  if (_stuff->size()) {
+    for (list<Objet>::iterator it = _stuff->begin() ; it != _stuff->end() ; ++ it) {
+      it->infosTexte() ;
+    }
+  }
+  else
+    std::cout << "l'inventaire est vide\n" ;
+  std::cout << "<***>\n" ;
+}
 
 Inventaire::~Inventaire(){
-  delete _stuff;
+  delete[] _stuff;
 }

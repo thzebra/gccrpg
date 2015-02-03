@@ -2,13 +2,14 @@
 
 Utilisable::Utilisable() {}
 
-Utilisable::Utilisable(string nom, int poids, int valeur) {
+Utilisable::Utilisable(string nom, int poids, int valeur, enum Talent t) {
   _nom = new string(nom) ;
   _poids = poids ;
   _valeur = valeur ;
   _enchantements = new std::list<Enchantement> ;
   _effets = new list<Effet> ;
   _elt = NEUTRE ;
+  _talent = t ;
 }
 
 void Utilisable::useObjet(Creature &cible) {}

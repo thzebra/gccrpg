@@ -1,5 +1,7 @@
 #include "Enchantement.hpp"
 
+Enchantement::Enchantement() {}
+
 Enchantement::Enchantement(Element elt, std::map<Caracteristique, int> modifCarac, int modifAttaque, int modifDefense) {
   _elt = elt ;
   _modifAttaque = modifAttaque ;

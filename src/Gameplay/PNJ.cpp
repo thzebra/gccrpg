@@ -22,8 +22,8 @@ int PNJ::getPoidsMax() const {
   return _corps->getForce() * 50 ;
 }
 
-void PNJ::utiliserObjet(Objet o, Creature c) {
-  // rien
+void PNJ::utiliserObjet(Utiliser u, Creature c) {
+  u.useObject(&c) ;
 }
 
 void PNJ::pickObjet(Objet &o) {
@@ -72,6 +72,10 @@ PNJ * PNJ::createHumain(string nom) {
 			  30, 17, 5, 5, 4, 4, 6, 4, 6, 7, HUMAIN,
 			  new Coordonnees(0, 0)) ;
   return newHumain ;
+}
+
+void PNJ::mourir() {
+  // lâcher des objets et des sous -> voir avec trucs de terrain
 }
 
 PNJ::~PNJ() {

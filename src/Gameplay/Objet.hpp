@@ -25,7 +25,7 @@ protected :
 public :
   Objet() ;
   Objet(string nom, int poids, int valeur) ;
-  virtual string * getNom() const ;
+  virtual string getNom() const ;
   virtual int getPoids() const ;
   virtual int getValeur() const ;
   virtual int getModificateur(Talent t) ;
@@ -35,6 +35,7 @@ public :
   virtual Talent getTalent() ;
   virtual Element getElement() ;
   bool operator==(const Objet & obj) const ;
+  virtual void infosTexte() ;
   virtual ~Objet() ;
 } ;
 

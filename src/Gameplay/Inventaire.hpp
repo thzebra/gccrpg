@@ -22,6 +22,7 @@ public :
   virtual void vendre(Objet &o) ;
   virtual int getSous() ;
   virtual void pickSous(int s) ;
+  virtual void infosTexte() ;
   virtual ~Inventaire() ;
 } ;
 

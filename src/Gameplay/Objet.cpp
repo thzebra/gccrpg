@@ -1,17 +1,19 @@
 #include "Objet.hpp"
 
-Objet::Objet() {}
+Objet::Objet() {
+  Objet("dummy", 1, 1) ;
+}
 
 Objet::Objet(string nom, int poids, int valeur) {
   _nom = new string(nom) ;
   _poids = poids ;
   _valeur = valeur ;
-  _enchantements = new std::list<Enchantement> ;
+  _enchantements = new std::list<Enchantement>(0) ;
   _elt = NEUTRE ;
 }
 
-string * Objet::getNom() const {
-  return _nom ;
+string Objet::getNom() const {
+  return *_nom ;
 }
 
 int Objet::getPoids() const {
@@ -54,7 +56,11 @@ bool Objet::operator==(const Objet & obj) const {
   return (this->_nom)->compare(*(obj._nom)) ;
 }
 
+void Objet::infosTexte() {
+  std::cout << *_nom << " (poids " << _poids << ", valeur " << _valeur << ")\n" ;
+}
+
 Objet::~Objet() {
-  delete[] _nom ;
+  delete _nom ;
   delete _enchantements ;
 }
