@@ -12,7 +12,11 @@ Utilisable::Utilisable(string nom, int poids, int valeur, enum Talent t) {
   _talent = t ;
 }
 
-void Utilisable::useObjet(Creature &cible) {}
+void Utilisable::useObjet(Creature * cible) {
+  for (list<Effet>::iterator it = _effets->begin() ; it != _effets->end() ; ++it) {
+    it->affecter(cible) ;
+  }
+}
 
 list<Effet> * Utilisable::getEffets() {
   return _effets ;

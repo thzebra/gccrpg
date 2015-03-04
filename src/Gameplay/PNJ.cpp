@@ -22,8 +22,8 @@ int PNJ::getPoidsMax() const {
   return _corps->getForce() * 50 ;
 }
 
-void PNJ::utiliserObjet(Utiliser u, Creature c) {
-  u.useObject(&c) ;
+void PNJ::utiliserObjet(Utilisable u, Creature c) {
+  u.useObjet(&c) ;
 }
 
 void PNJ::pickObjet(Objet &o) {

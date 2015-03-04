@@ -5,6 +5,7 @@
 
 #include "GeneralIncludes.hpp"
 
+#include "Effet.hpp"
 #include "Alteration.hpp"
 #include "Buff.hpp"
 #include "Caracteristique.hpp"

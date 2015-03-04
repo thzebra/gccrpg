@@ -17,7 +17,7 @@ public :
   Alteration(EtatAlt a) ;
   int getModifAttaque() ;
   int getModifDefense() ;
-  void getEffet(Creature * c) ;
+  void affecter(Creature * c) ;
   void endEffet(Creature * c) ;
   ~Alteration() ;
 } ;

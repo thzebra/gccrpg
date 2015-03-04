@@ -58,9 +58,9 @@ Perso * Perso::createHumain(string nom) {
   return newHumain ;
 }
 
-void Perso::utiliserObjet(Utiliser u, Creature c) {
-  u.useObject(&c) ;
-  upgradeTalent(o.getTalent()) ;
+void Perso::utiliserObjet(Utilisable u, Creature c) {
+  u.useObjet(&c) ;
+  upgradeTalent(u.getTalent()) ;
 }
 
 void Perso::infosTexte() {

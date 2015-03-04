@@ -1,6 +1,8 @@
 #ifndef __EFFET_HPP__
 #define __EFFET_HPP__
 
+struct Creature ;
+
 class Effet {
 
 protected :
@@ -10,6 +12,7 @@ protected :
 public :
   Effet() ;
   Effet(int t) ;
+  virtual void affecter(Creature * c) ;
   virtual bool isFini() const ;
   virtual void endEffet() ;
   virtual void step() ;

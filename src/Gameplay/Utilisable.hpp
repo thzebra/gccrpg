@@ -17,7 +17,7 @@ protected :
 public :
   Utilisable() ;
   Utilisable(string nom, int poids, int valeur, enum Talent t = NOTALENT) ;
-  virtual void useObjet(Creature &cible) ;
+  virtual void useObjet(Creature * cible) ;
   virtual std::list<Effet> * getEffets() ;
   virtual ~Utilisable() ;
 } ;

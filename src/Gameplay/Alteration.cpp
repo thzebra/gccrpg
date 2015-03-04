@@ -5,7 +5,7 @@ Alteration::Alteration(EtatAlt a) {
   _alt = a ;
 }
 
-void Alteration::getEffet(Creature * c) {
+void Alteration::affecter(Creature * c) {
   switch (_alt) {
   case EMPOISONNE :
     c->modifVie(-5) ;

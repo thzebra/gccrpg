@@ -11,6 +11,10 @@ bool Effet::isFini() const {
   return _timer == 0 ;
 }
 
+void affecter(Creature * c) {
+  // défini dans les classes filles
+}
+
 void Effet::step() {
   _aCommence = true ;
   if (isFini())
